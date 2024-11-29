@@ -1,0 +1,108 @@
+body {
+  font-family: Arial, sans-serif;
+}
+
+.app {
+  margin: 20px;
+}
+
+.toolbar {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.toolbar input {
+  flex: 1;
+  padding: 8px;
+  font-size: 16px;
+}
+
+.excel-table {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ccc;
+  max-width: 100%;
+  margin: auto;
+}
+
+.row {
+  display: flex;
+}
+
+.cell {
+  flex: 1;
+  padding: 5px;
+  text-align: left;
+  border: 1px solid #ccc;
+  min-width: 80px;
+}
+
+.cell:focus {
+  border: 2px solid #007BFF;
+  outline: none;
+}
+
+.header-cell {
+  background-color: #f4f4f4;
+  font-weight: bold;
+  text-align: center;
+}
+
+.header-row .header-cell {
+  min-width: 80px;
+}
+
+.cell.selected {
+  background-color: lightblue;
+}
+
+.cell.selected-range {
+  background-color: lightgreen;
+}
+
+.cell.range-selected {
+  background-color: rgba(173, 216, 230, 0.5); /* Light blue */
+  border: 2px dashed #007BFF;
+}
+
+.cell:hover {
+  cursor: pointer;
+}
+
+.toolbar input {
+  flex: 1;
+  padding: 8px;
+  font-size: 16px;
+}
+
+.excel-table {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ccc;
+  max-width: 100%;
+  margin: auto;
+}
+
+.row {
+  display: flex;
+}
+
+.cell {
+  flex: 1;
+  padding: 5px;
+  text-align: left;
+  border: 1px solid #ccc;
+  min-width: 80px;
+}
+
+.cell:focus {
+  border: 2px solid #007BFF;
+  outline: none;
+}
+
+.header-cell {
+  background-color: #f4f4f4;
+  font-weight: bold;
+  text-align: center;
+}
