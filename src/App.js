@@ -921,7 +921,7 @@ const AppContent = () => {
   // Обработка функций в формулах
   const handleFunctions = (formula) => {
     const sumRegex = /(?:СУММ|SUM)\((([A-Z])(\d+):([A-Z])(\d+))\)/i;
-    const avgRegex = /(?:СРЗНАЧ|AVG)\((([A-Z])(\d+):([A-Z])(\d+))\)/i;
+    const avgRegex = /(?:СРЗНАЧ|AVG|AVERAGE)\((([A-Z])(\d+):([A-Z])(\d+))\)/i;
     const sumifRegex = /(?:СУММЕСЛИ|SUMIF)\((([A-Z])(\d+):([A-Z])(\d+)),([^)]+)\)/i;
     const minRegex = /(?:МИН|MIN)\((([A-Z])(\d+):([A-Z])(\d+))\)/i;
     const maxRegex = /(?:МАКС|MAX)\((([A-Z])(\d+):([A-Z])(\d+))\)/i;
