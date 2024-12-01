@@ -1,0 +1,223 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--background-color);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.light-theme {
+  --primary-color: #10793F;
+  --secondary-color: #f50057;
+  --background-color: #ffffff;
+  --paper-color: #f5f5f5;
+  --text-color: #000000;
+  --header-background-color: #e0e0e0;
+  --header-text-color: #000000;
+  --header-border-color: #ccc;
+  --selected: #d0e7f5;
+  --range-selected: #f5d0d0;
+}
+
+.dark-theme {
+  --primary-color: #bb86fc;
+  --secondary-color: #03dac6;
+  --background-color: #121212;
+  --paper-color: #1e1e1e;
+  --text-color: #ffffff;
+  --header-background-color: #2e2e2e;
+  --header-text-color: #ffffff;
+  --header-border-color: #4d4d4d;
+  --selected: #7070706e;
+  --range-selected: #8f8f8f6e;
+}
+
+.dark-theme .MuiOutlinedInput-root {
+  color: #d3d3d3;
+  border-color: #d3d3d3;
+}
+
+.dark-theme .MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline {
+  border-color: #d3d3d3;
+}
+
+.app {
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+.toolbar {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.toolbar input[type="text"] {
+  margin-right: 10px;
+}
+
+.toolbar button {
+  margin-right: 10px;
+}
+
+.table-container {
+  flex: 1;
+  overflow: auto;
+  position: relative;
+}
+
+.fixed-scrollbar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 16px;
+  overflow-x: auto;
+  background-color: var(--background-color);
+  z-index: 1100;
+}
+
+.excel-table {
+  display: inline-block;
+  min-width: 100%;
+  border: 1px solid #ccc;
+  background-color: var(--background-color);
+}
+
+.row {
+  display: flex;
+  white-space: nowrap;
+}
+
+.cell {
+  background-color: var(--paper-color);
+  border: 1px solid #ccc;
+  padding: 5px;
+  box-sizing: border-box;
+  min-height: 20px;
+  position: relative;
+  min-width: 100px;
+  text-align: center;
+  flex-shrink: 0;
+  user-select: none;
+  color: var(--text-color);
+}
+
+.cell-input {
+  width: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+  box-sizing: border-box;
+  user-select: text;
+  color: var(--text-color);
+}
+
+.header-row {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+.dark-theme .header-row {
+  background-color: #121212;
+}
+
+.light-theme .header-row {
+  background-color: #ffffff;
+}
+
+.header-cell {
+  background-color: var(--header-background-color);
+  color: var(--header-text-color);
+  border: 1px solid var(--header-border-color);
+  font-weight: bold;
+  text-align: center;
+  position: sticky;
+  z-index: 1;
+}
+
+.header-cell:first-child {
+  position: sticky;
+  left: 0;
+  z-index: 3;
+}
+
+.header-row .header-cell:first-child {
+  z-index: 4;
+}
+
+.row:not(.header-row) .header-cell {
+  position: sticky;
+  left: 0;
+}
+
+.selected {
+  background-color: var(--selected);
+}
+
+.range-selected {
+  background-color: var(--range-selected);
+}
+
+.column-resizer {
+  width: 5px;
+  cursor: col-resize;
+  background-color: #ccc;
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+  touch-action: none;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.MuiAppBar-root {
+  position: sticky;
+  top: 0;
+  z-index: 1100;
+}
+
+.container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+  background-color: var(--background-color);
+  box-sizing: border-box;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: var(--background-color);
+}
+
+td, th {
+  padding: 0;
+  margin: 0;
+  background-color: var(--background-color);
+}
+
+tr {
+  background-color: var(--background-color);
+}

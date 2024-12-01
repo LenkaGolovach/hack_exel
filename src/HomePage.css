@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:100&display=swap');
+
+body, html {
+  margin: 0;
+  padding: 0;
+  background: none;
+  font-family: 'Lato', sans-serif;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; /* Вертикальное расположение кнопок */
+  background: linear-gradient(90deg, #cfecd0, #a0cea7, #9ec0db);
+}
+
+.center {
+  width: 360px; /* Увеличен размер */
+  height: 90px; /* Увеличен размер */
+  position: relative;
+  margin-bottom: 30px; /* Увеличен отступ между кнопками */
+}
+
+.button-wrapper {
+    margin-bottom: 30px; /* Отступ между кнопками */
+  }
+
+
+  .btn {
+    width: 360px; /* Увеличен размер */
+    height: 90px; /* Увеличен размер */
+    cursor: pointer;
+    background: transparent;
+    border: 3px solid #feffff; /* Уменьшена толщина обводки */
+    outline: none;
+    transition: 1s ease-in-out;
+    position: relative;
+    color: #FFF; /* Text color */
+    line-height: 90px; /* Center text vertically */
+    text-align: center; /* Center text horizontally */
+    overflow: hidden; /* Чтобы SVG не выходил за пределы кнопки */
+  }
+  
+  .btn-one {
+    position: relative;
+    transition: all 0.3s;
+    width: 360px !important;
+    height: 90px !important;
+  }
+  
+  .btn-one span {
+    transition: all 0.3s;
+  }
+  
+  .btn-one::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    z-index: 1;
+    opacity: 0;
+    transition: all 0.3s;
+  
+    border-top-style: solid;
+    border-bottom-style: solid;
+    border-top-color: rgba(255, 255, 255, 0.9);
+    border-bottom-color: rgba(255, 255, 255, 0.9);
+    transform: scale(0.1, 1);
+  }
+  
+  .btn-one:hover span {
+    letter-spacing: 2px;
+  }
+  
+  .btn-one:hover::before {
+    opacity: 1;
+    transform: scale(1, 1);
+  }
+  
+  .btn-one::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    transition: all 0.3s;
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  
+  .btn-one:hover::after {
+    opacity: 0;
+    transform: scale(0.1, 1);
+  }
+  
+   svg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    fill: none;
+    stroke: #fff;
+    stroke-width: 5; 
+    stroke-dasharray: 1200 1200; 
+    stroke-dashoffset: 1300; 
+    transition: 1s ease-in-out;
+  }
+  
+  .btn:hover svg {
+    stroke-dashoffset: -1200; 
+  } 
+  
+  .btn span {
+    color: white;
+    font-size: 20px; /* Увеличен размер шрифта */
+    font-weight: 600; /* Increase font weight for bolder text */
+    position: relative;
+    z-index: 1;
+  }
+
+header h1 {
+  font-size: 190px;
+  font-weight: 600;
+  color: #fdfdfe;
+  text-shadow: 0px 0px 5px #eef0f1, 0px 0px 10px #d2e9f0, 0px 0px 10px #d2e9f0,
+    0px 0px 20px #d2e9f0;
+  margin: 0;
+  padding: 20px 0; /* Добавьте отступ, если необходимо */
+  letter-spacing: 15px; /* Увеличивает расстояние между буквами */
+  font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
+
+
+}
